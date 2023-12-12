@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+// класс со всеми item'ами
 @Entity (tableName = "items")
 data class Item(
     @PrimaryKey(autoGenerate = true)

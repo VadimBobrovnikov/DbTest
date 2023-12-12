@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="22dp"
         android:ems="10"
-        android:hint="tele"
+        android:hint="Tel/Code"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"

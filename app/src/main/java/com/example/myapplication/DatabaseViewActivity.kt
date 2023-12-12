@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.material3.MaterialTheme
 
 class DatabaseViewActivity : AppCompatActivity() {
+
     private val db: MainDB by lazy { MainDB.getDb(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,5 +26,6 @@ class DatabaseViewActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
 }

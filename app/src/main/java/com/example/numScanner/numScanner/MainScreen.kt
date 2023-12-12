@@ -4,8 +4,12 @@ package com.example.numScanner.numScanner
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 
 
 import androidx.compose.material.Button
@@ -24,6 +28,9 @@ import com.google.accompanist.permissions.rememberPermissionState
 import com.example.numScanner.numScanner.noPremission.NoPermissionScreen
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
 
 //запрос разрешения на использование камеры
 @OptIn(ExperimentalPermissionsApi::class)
@@ -57,13 +64,21 @@ private fun MainContent(
     } else {
         NoPermissionScreen(onRequestPermission)
     }
+
+        // кнопка для перехода на экран с бд
     Button(
         onClick = {
             activity.startActivity(Intent(activity, DatabaseViewActivity::class.java))
         },
         modifier = Modifier.align(Alignment.BottomEnd)
+            .padding(bottom = 64.dp)
+            .size(95.dp, 40.dp),
+
     ) {
-        Text("View Database")
+        Text("View Database",
+            modifier = Modifier,
+            color = Color.White,
+            overflow = TextOverflow.Ellipsis)
     }
 }}
 
